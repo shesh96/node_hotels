@@ -11,7 +11,7 @@ router.post('/', async (req, res) => {
     const newPerson = new person(newPersonData);
 
     // Save the new person to the database using await
-    const savedPerson = await newPerson.save();
+    const savedPerson = await new Person.save();
     console.log('Saved person to database');
     res.status(200).json(savedPerson);
     } 
@@ -22,7 +22,7 @@ router.post('/', async (req, res) => {
     }
     }); 
 
-    //1. GET Method to get the person
+//1. GET Method to get the person
 router.get('/', async(req,res)=>{
     try{
         const savedPerson = await person.find();

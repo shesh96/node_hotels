@@ -14,14 +14,13 @@ app.get('/', function (req, res) {
 })
 
 
-
 //Import the router files
 const personRoutes= require('./routes/personRoutes');
 const menuItemRoutes=require('./routes/menuItemRoutes');
 
 //use the routers
-app.use('/person',personRoutes); 
-app.use('/menuItem',personRoutes);  
+app.use('/person',personRoutes);  
+app.use('/menuItem',menuItemRoutes);  
 
 
 app.listen(PORT,()=>{
