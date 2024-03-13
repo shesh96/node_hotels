@@ -20,7 +20,7 @@ const menuItemRoutes=require('./routes/menuItemRoutes');
 
 //use the routers
 app.use('/person',personRoutes);  
-app.use('/menuItem',menuItemRoutes);  
+app.use('/menuItem',menuItemRoutes) ;  
 
 
 app.listen(PORT,()=>{

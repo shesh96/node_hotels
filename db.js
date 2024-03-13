@@ -3,7 +3,7 @@ require('dotenv').config();
 
 // Define the MongoDB connection URL
 //const mongoURL=process.env.MONGODB_URL_LOCAL;// 'hotel is name of databse , also can change'
-const mongoURL= process.env.MONGODB_URL;
+const mongoURL= process.env.MONGODB_URL;// This connection for just for Local mongodb enviroment 
 
 
 // Set up MongoDB connection

@@ -11,18 +11,18 @@ router.post('/', async (req, res) => {
     const newPerson = new person(newPersonData);
 
     // Save the new person to the database using await
-    const savedPerson = await new Person.save();
+    const savedPerson = await newPerson.save();
     console.log('Saved person to database');
     res.status(200).json(savedPerson);
     } 
     catch (err) {
-        console.log(err);
+        console.log(err); 
     ///console.error('Error saving person:', error); 
     res.status(500).json({ error: 'Internal server error' });
     }
     }); 
 
-//1. GET Method to get the person
+//1. GET Method to get the person..
 router.get('/', async(req,res)=>{
     try{
         const savedPerson = await person.find();
@@ -98,5 +98,3 @@ router.delete('/:id',async(req,res)=>{
 
 module.exports = router;
 
-
-    
